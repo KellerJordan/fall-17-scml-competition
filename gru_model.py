@@ -3,9 +3,6 @@
 import numpy as np
 import h5py
 
-# Please download the file SCNeuronModelCompetition.mat from here.
-# https://github.com/santacruzml/fall-17-scml-competition/releases/download/0.0-data/SCNeuronModelCompetition.mat
-
 datafile = h5py.File('SCNeuronModelCompetition.mat')
 movie = datafile.get('trainingmovie_mini') # movie for training
 frhist = datafile.get('FRhist_tr') # firing rate histograms
@@ -18,15 +15,8 @@ def normalize(inputmovie):
 
 movie_norm = normalize(movie)
 
-
-# here's the modeling part. I'll give just a starting point
-
 import keras
 from keras.layers import LSTM, Activation, Dense, BatchNormalization
-
-# It makes a 3-layer LSTM network with batch normalization on each layer.
-# No dropout, regularization, convolution structures are used.
-# As you see in the summary, most parameters go to the first weight matrix.
 
 movie_chunk_length = movie_norm.shape[1]
 movie_pix = movie_norm.shape[2]
@@ -62,11 +52,10 @@ import matplotlib.pyplot as plt
 output = model.predict(movie_norm)
 
 for m in range(0, 48):
-    n=31
+    n = 31
     # plot the average of 6 trials of the same movie
     plt.plot(np.mean(frhist[(m*6):(m+1)*6, :, n], axis=(0)))
-    
     # plot the output of the network
-    plt.plot(output[m*6,:,n])
+    plt.plot(output[m*6, :, n])
     plt.show()
     # last 10 movies should be the validation dataset
