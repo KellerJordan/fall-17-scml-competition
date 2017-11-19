@@ -1,4 +1,6 @@
-.ipynb_checkpoints
+.ipynb_checkpoints/
+.vscode/
+data/
 
 scml-SuperiorColliculusCompetition.ipynb
 SCNeuronModelCompetition.mat
