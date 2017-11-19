@@ -7,3 +7,18 @@ A more reasonable thing to output than the max-likelihood estimation of how like
 I will attempt to make a second model which creates this. Generative adversarial?
 
 Re-create the image from firing activities?
+
+
+`hiddendata`
+[[ 13.]
+ [ 21.]
+ [ 36.]
+ [ 31.]
+ [ 33.]
+ [ 17.]
+ [ 24.]
+ [ 35.]
+ [  6.]
+ [ 30.]]
+
+also `trialdata`...
