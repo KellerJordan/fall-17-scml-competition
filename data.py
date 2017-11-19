@@ -16,3 +16,6 @@ def normalize(inputmovie):
 
 movie_norm = normalize(movie)
 datafile.create_dataset('trainingmovie_norm', data=movie_norm)
+
+datafile = h5py.File('SCNeuronModelCompetition.mat')
+print(list(datafile.items()))
