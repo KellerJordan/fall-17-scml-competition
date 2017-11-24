@@ -1,3 +1,5 @@
+Please see `Competition-Entry.ipynb` for my entry.
+
 # SCML Fall 2017 Competition
 
 ## Can machines learn how the mouse sees?
